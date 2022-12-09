@@ -30,6 +30,7 @@ public class Zoo <T extends Cat> {
         https://github.com/JcoderPaul/JavaExtended-1-6/tree/master/Less_6_OOP_GenericsWildCard
         */
         public int compare(Zoo<?> another) {
+            // Статический метод класса Float позволяющий сравнивать переменные float
             return Float.compare(getWeightOfAllCatsInZoo(), another.getWeightOfAllCatsInZoo());
         }
         /*
