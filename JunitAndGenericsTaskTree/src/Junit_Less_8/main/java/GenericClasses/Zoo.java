@@ -24,9 +24,10 @@ public class Zoo <T extends Cat> {
         }
         /*
         А вот тут интересный момент, если сам класс Zoo параметризирован <T типом наследником Cat>,
-        то в данном случае используется конструкция <?> 'дикие карты' - wildcard (джокер, неожиданный),
-        т.е. в данной ситуации совершенно любой тип и необязательно <T> и его наследники. Подробные уроки
-        см. https://github.com/JcoderPaul/JavaExtended-1-6/tree/master/Less_6_OOP_GenericsWildCard
+        то в данном случае используется конструкция <?> маска 'дикие карты' - wildcard (джокер,
+        неожиданный), т.е. в данной ситуации совершенно любой тип и необязательно <T> и его наследники.
+        Подробные уроки см.
+        https://github.com/JcoderPaul/JavaExtended-1-6/tree/master/Less_6_OOP_GenericsWildCard
         */
         public int compare(Zoo<?> another) {
             return Float.compare(getWeightOfAllCatsInZoo(), another.getWeightOfAllCatsInZoo());
