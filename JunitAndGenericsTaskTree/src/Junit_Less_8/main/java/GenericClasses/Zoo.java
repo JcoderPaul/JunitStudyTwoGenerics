@@ -61,6 +61,14 @@ public class Zoo <T extends Cat> {
             */
             source.cats.clear();
         }
+        /*
+        Пример статического метода параметризированного <T> и возвращающего
+        T, отсюда такая последовательность <Т> Т. В метод передается коллекция
+        также параметризированная T.
+        */
+        public static <T> T getFirstElementFromCollections(List<T> list){
+            return list.get(0);
+        }
 
         public List<T> getCats() {
             return cats;
