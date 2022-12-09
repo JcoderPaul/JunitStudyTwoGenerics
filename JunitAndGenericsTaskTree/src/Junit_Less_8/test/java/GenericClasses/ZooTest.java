@@ -169,4 +169,17 @@ public class ZooTest {
         assertEquals(0f, servalZooTwo.getWeightOfAllCatsInZoo(), 0.001);
         assertEquals(0f, tigerZooTwo.getWeightOfAllCatsInZoo(), 0.001);
     }
+
+    @Test
+    public void getFirstElementFromCollections() {
+        System.out.println("------- Тест getFirstElementFromCollections() -------");
+        float testFirstServalWeight = servalZoo.getCats().get(0).getWeight();
+        float testFirstTigerWeight = tigerZoo.getCats().get(0).getWeight();
+        System.out.println("Вес первого сервала в зоопарке: " + testFirstServalWeight);
+        System.out.println("Вес первого тигра в зоопарке: " + testFirstTigerWeight);
+        assertEquals(testFirstServalWeight,
+                Zoo.getFirstElementFromCollections(servalZoo.getCats()).getWeight(), 0.001);
+        assertEquals(testFirstTigerWeight,
+                Zoo.getFirstElementFromCollections(tigerZoo.getCats()).getWeight(), 0.001);
+    }
 }
